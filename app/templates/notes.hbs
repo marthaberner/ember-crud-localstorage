@@ -1,0 +1,13 @@
+<h1>Create a New Note</h1>
+<p>
+  {{message}}
+</p>
+<p>
+  {{#each note in model}}
+  <li>{{note.body}} <button {{action 'deleteNote' note}}>Delete</button></li>
+  {{/each}}
+</p>
+<p>
+{{textarea value=newBody cols="40" rows="6" placeholder="add a new note"}}
+</p>
+<button {{action 'createNote'}}>Create</button>
